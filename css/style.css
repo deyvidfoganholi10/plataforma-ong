@@ -1,0 +1,197 @@
+/* Variáveis de cores */
+:root {
+    --cor-primaria: #28a745; /* Verde principal */
+    --cor-secundaria: #6C757D; /* Cinza secundário */
+    --cor-fundo: #F8F9FA; /* Fundo claro */
+    --cor-texto: #212529; /* Texto escuro */
+    --cor-card: #FFFFFF; /* Fundo dos cards */
+    --cor-borda: #DEE2E6; /* Bordas suaves */
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body */
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Menu de navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Seção de projetos (layout antigo, ainda funcional) */
+.projetos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin-top: 10px;
+    color: var(--cor-primaria);
+}
+
+/* Formulário de cadastro */
+form {
+    background-color: var(--cor-card);
+    padding: 20px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+}
+
+form button {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #218838; /* verde mais escuro ao passar o mouse */
+}
+
+/* Footer */
+footer {
+    background-color: var(--cor-secundaria);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* ====== NOVA SEÇÃO DE PROJETOS (GALERIA RESPONSIVA) ====== */
+.area-imagens {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.item {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 320px;
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+.item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.item h3 {
+    margin: 15px;
+    font-size: 1.3em;
+    color: var(--cor-primaria);
+}
+
+.item p {
+    margin: 0 15px 20px;
+    color: #555;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/* ====== BOTÃO DE VOLTAR ====== */
+.voltar-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.btn-voltar {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-voltar:hover {
+    background-color: #218838; /* tom mais escuro ao passar o mouse */
+    transform: translateY(-3px);
+}
